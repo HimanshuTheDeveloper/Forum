@@ -25,22 +25,22 @@
     <?php include "partials\_navbar.php" ?>
     <?php include "partials\_dbconnect.php" ?>
     <?php
-         $id = $_GET['catid'];
-         $sql = "SELECT * FROM `categories` WHERE category_id = $id";
+         $id = $_GET['threadid'];         
+         $sql = "SELECT * FROM `threads` WHERE thread_id = $id";
          $result = mysqli_query($conn , $sql);
          
          
          while($row = mysqli_fetch_assoc($result)){
-            $catname = $row['category_name'];
-            $catdesc = $row['category_description'];
+            $title = $row['thread_title'];
+            $desc = $row['thread_desc'];
 
          }
     ?>
 
     <div class="container my-4">
         <div class="jumbotron">
-            <h1 class="display-4">Welcome to <?php echo $catname; ?> Forum</h1>
-            <p class="lead"><?php echo $catdesc ?> </p>
+            <h1 class="display-4">Welcome to <?php echo $title; ?> Forum</h1>
+            <p class="lead"><?php echo $desc ?> </p>
             <hr class="my-4">
             <p>This is peer to peer forum is for sharing knowledge with each other.
                 Do not post copyright-infringing material.
@@ -52,32 +52,31 @@
         </div>
 
         <div class="container" id="question">
-            <h1>Browse Questions</h1>
+            <h1>Discussions</h1>
 
-            <?php
+            <!-- <?php
                 $id = $_GET['catid'];
                 $sql = "SELECT * FROM `threads` WHERE thread_cat_id = $id";
                 $result = mysqli_query($conn , $sql);
                 while($row = mysqli_fetch_assoc($result)){
                     $id = $row['thread_id'];
-                   
                     $title = $row['thread_title'];
                     $desc = $row['thread_desc'];
                      
                 echo '  <div class="media my-3">
                        <img src="./img/user.png" class="mr-3 d-block w-20" style="height: 64px" alt="...">
                        <div class="media-body">
-                           <h5 class="mt-0"><a href="thread.php?threadid='.$id.'"> '. $title .' </a></h5>
+                           <h5 class="mt-0"><a href="thread.php?thread_id = '.$id.'">'. $title .'</a></h5>
                            '.$desc.'
                    </div> 
                    </div> ';
                 }
-                    ?>
-         
+                ?>
+          -->
            
 
 
-    </div>
+     </div>
     </div>
     <?php include "partials\_footer.php" ?>
 

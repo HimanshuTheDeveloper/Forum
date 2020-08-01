@@ -32,13 +32,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./img/slide-1.jpg" class="d-block w-100" style="height: 420px" alt="...">
+                    <img src="./img/slide-1.jpg" class="d-block w-100" style="height: 440px" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/slide-2.jpg" class="d-block w-100" style="height: 420px" alt="...">
+                    <img src="./img/slide-2.jpg" class="d-block w-100" style="height: 440px" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./img/slide-3.jpg" class="d-block w-100" style="height: 420px" alt="...">
+                    <img src="./img/slide-3.jpg" class="d-block w-100" style="height: 440px" alt="...">
                 </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -68,12 +68,12 @@
                 
                 echo '
 
-                <div class="col-md-4 my-4">      
+                <div class="col-md-4 my-3">      
                 <div class="card" style="width: 18rem;">
-                    <img src="./img/card-'.$id.'.jpg " class="card-img-top" alt="...">
+                    <img src="./img/card-'.$id.'.jpg " height="200px" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title"><a href="threadlist.php?catid= ' . $id . ' ">' . $cat . ' </a></h5>
-                        <p class="card-text">'.substr($desc,0,90).'</p>
+                        <p class="card-text">'.substr($desc,0,80).'</p>
                             <a href="#" class="btn btn-primary">Go somewhere</a>
                             </div>
                             </div>
